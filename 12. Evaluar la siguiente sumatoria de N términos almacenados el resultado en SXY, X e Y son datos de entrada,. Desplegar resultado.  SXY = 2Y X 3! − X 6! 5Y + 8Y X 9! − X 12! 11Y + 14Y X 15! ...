@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int N, X, Y;
+    double SXY = 0;
+
+    cout << "Ingrese el valor de N: ";
+    cin >> N;
+    cout << "Ingrese el valor de X: ";
+    cin >> X;
+    cout << "Ingrese el valor de Y: ";
+    cin >> Y;
+
+    for (int i = 1; i <= N; i++) {
+        if (i % 2 == 1) {  // For odd terms (add)
+            SXY += (double)(2 * i * Y) / X / factorial(3 * i);
+        } else {           // For even terms (subtract)
+            SXY -= (double)(2 * i * Y) / X / factorial(3 * i);
+        }
+    }
+
+    cout << "La sumatoria de los primeros " << N << " términos es: " << SXY << endl;
+
+    return 0;
+}
