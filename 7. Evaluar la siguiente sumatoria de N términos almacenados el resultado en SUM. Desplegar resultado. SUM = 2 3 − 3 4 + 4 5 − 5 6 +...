@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int N;
+    double SUM = 0;
+
+    cout << "Ingrese el valor de N: ";
+    cin >> N;
+
+    for (int i = 1; i <= N; i++) {
+        if (i % 2 == 1) {  // For odd terms (add)
+            SUM += (double)(i + 1) / (i + 2);
+        } else {           // For even terms (subtract)
+            SUM -= (double)(i + 1) / (i + 2);
+        }
+    }
+
+    cout << "La sumatoria de los primeros " << N << " términos es: " << SUM << endl;
+
+    return 0;
+}
