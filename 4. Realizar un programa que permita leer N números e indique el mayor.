@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int N;
+    int maxNum;
+
+    cout << "Ingrese la cantidad de números (N): ";
+    cin >> N;
+
+    cout << "Ingrese " << N << " números: " << endl;
+    cin >> maxNum; // Read the first number as the initial maximum
+
+    for (int i = 1; i < N; i++) {
+        int num;
+        cin >> num;
+        if (num > maxNum) {
+            maxNum = num;
+        }
+    }
+
+    cout << "El número mayor es: " << maxNum << endl;
+
+    return 0;
+}
