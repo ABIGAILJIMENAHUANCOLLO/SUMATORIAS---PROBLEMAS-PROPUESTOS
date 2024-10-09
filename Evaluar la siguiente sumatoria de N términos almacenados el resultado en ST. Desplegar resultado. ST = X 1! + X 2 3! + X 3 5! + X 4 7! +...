@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int N;
+    double ST = 0;
+
+    cout << "Ingrese el valor de N: ";
+    cin >> N;
+
+    for (int i = 1; i <= N; i++) {
+        ST += (double)i / factorial((2 * i) - 1);
+    }
+
+    cout << "La sumatoria de los primeros " << N << " términos es: " << ST << endl;
+
+    return 0;
+}
