@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int N;
+    double SX = 0;
+
+    cout << "Ingrese el valor de N: ";
+    cin >> N;
+
+    for (int i = 1; i <= N; i++) {
+        if (i % 2 == 1) {  // For odd terms (add)
+            SX += (double)(i * i) / factorial(i * 2);
+        } else {           // For even terms (subtract)
+            SX -= (double)(i * i) / factorial(i * 2);
+        }
+    }
+
+    cout << "La sumatoria de los primeros " << N << " términos es: " << SX << endl;
+
+    return 0;
+}
