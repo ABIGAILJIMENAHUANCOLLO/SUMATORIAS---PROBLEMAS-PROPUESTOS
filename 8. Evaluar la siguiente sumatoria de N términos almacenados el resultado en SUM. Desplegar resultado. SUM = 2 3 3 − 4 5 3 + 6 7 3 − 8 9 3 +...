@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int N;
+    double V = 0;
+
+    cout << "Ingrese el valor de N: ";
+    cin >> N;
+
+    for (int i = 1; i <= N; i++) {
+        V += (double)i / (i + 1);
+    }
+
+    cout << "La sumatoria de los primeros " << N << " términos es: " << V << endl;
+
+    return 0;
+}
